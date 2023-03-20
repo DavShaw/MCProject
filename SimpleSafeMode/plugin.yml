@@ -1,0 +1,12 @@
+main: ssm.simplesafemode.SimpleSafeMode
+version: 1.0.5
+name: SimpleSafeMode
+author: KingXRP, Horwhat
+website: www.github.com/DavShaw/
+
+
+commands:
+  simplesafemode:
+   description: Just the main command for Simple Safe Mode plugin
+  ssm:
+    description: Just the main command for Simple Safe Mode plugin
