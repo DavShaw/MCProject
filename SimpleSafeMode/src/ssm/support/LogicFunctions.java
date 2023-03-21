@@ -87,14 +87,29 @@ public class LogicFunctions
     
     
     //Method to check if SafeMode status is on or off (for on returns true, for off returns false)
-    public boolean CheckSafeModeStatus(String path)
+    public boolean CheckSafeModeStatus(String Path)
     {
     	FileConfiguration config = ssmv.getConfig();
-    	if(config.getString(path).equals("true"))
+    	if(config.getString(Path).equals("true"))
     	{
     		return true;
     	}
     	return false;
+    }
+    
+    public String ConfigPathValueGetter(String Path)
+    {
+    	FileConfiguration config = ssmv.getConfig();
+    	return config.getString(Path);
+    }
+    
+
+  //Method to change a path info
+    public void ChangePathInfo(String Path, String NewPathInfo)
+    {
+    	FileConfiguration config = ssmv.getConfig();
+    	config.set(Path,NewPathInfo);
+    	ssmv.saveConfig();
     }
     
     

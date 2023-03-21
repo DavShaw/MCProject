@@ -3,6 +3,7 @@ config:
     #false = disable command
     reload: true
     help: true
+    auto-status-off-on-quit: false
 
 message:
     #Let's custom the messages!

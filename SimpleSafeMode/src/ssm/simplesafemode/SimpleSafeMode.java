@@ -2,6 +2,7 @@ package ssm.simplesafemode;
 
 import ssm.commands.SSMMainCommand;
 import ssm.events.SpecialItemRightClick;
+import ssm.events.ToServerQuit;
 import ssm.support.LogicFunctions;
 
 import java.io.File;
@@ -83,6 +84,7 @@ public class SimpleSafeMode extends JavaPlugin
 		PluginManager pm = getServer().getPluginManager();
 		
 		pm.registerEvents(new SpecialItemRightClick(), this);
+		pm.registerEvents(new ToServerQuit(), this);
 		
 	}
 	

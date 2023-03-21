@@ -15,7 +15,7 @@ public class SpecialItemRightClick implements Listener
 	LogicFunctions lfv = new LogicFunctions();
 	
 	@EventHandler
-	public void Clicking(PlayerInteractEvent event)
+	public void SpecialItemRightClicking(PlayerInteractEvent event)
 	{
 	
 		//Checking if user has info in config path
@@ -33,6 +33,7 @@ public class SpecialItemRightClick implements Listener
 						event.getPlayer().sendMessage("Se cumplió todo xd");
 					}
 				}
+				
 			}
 		}
 		
