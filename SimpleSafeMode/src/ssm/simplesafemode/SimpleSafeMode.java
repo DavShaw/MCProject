@@ -1,6 +1,7 @@
 package ssm.simplesafemode;
 
 import ssm.commands.SSMMainCommand;
+import ssm.events.SpecialItemRightClick;
 import ssm.support.LogicFunctions;
 
 import java.io.File;
@@ -8,6 +9,7 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SimpleSafeMode extends JavaPlugin
@@ -77,6 +79,10 @@ public class SimpleSafeMode extends JavaPlugin
 	
 	public void EventRegister()
 	{
+		
+		PluginManager pm = getServer().getPluginManager();
+		
+		pm.registerEvents(new SpecialItemRightClick(), this);
 		
 	}
 	

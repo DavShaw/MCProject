@@ -12,8 +12,13 @@ message:
     help-help: "/ssm help - Show plugin commands/guide"
     help-reload: "/ssm reload - reload plugin config file"
     help-developers: "/ssm developers - Show plugin developers"
+    help-ssm-on: "/ssm on - Enable SafeMode"
+    help-ssm-off: "/ssm off - Disable SafeMode"
     help-footer: "==========="
     nopermissions: "Sorry, but you have not permission to execute this command"
     noplayer: "Sorry, but you cannot execute this command. Just player can use this command"
     noexist: "Sorry, but this command doesn't exist. Use /ssm help to see plugin commands"
+    ssm-on: "Hey! SafeMode is enabled"
+    ssm-off: "Hey! SafeMode is disabled"
     
+playerinfo:

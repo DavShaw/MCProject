@@ -60,6 +60,22 @@ public class SSMMainCommand implements CommandExecutor
 						lfv.ReloadConfig();
 					}
 					
+					//Command with argument on
+					else if(args[0].equalsIgnoreCase("on"))
+					{
+						Player player = (Player) sender;
+						sender.sendMessage(String.format("%s%s",lfv.Message("prefix"),lfv.Message("ssm-on")));
+						lfv.SimpleSafeModeEnabler(player, true);
+					}
+					
+					//Command with argument of
+					else if(args[0].equalsIgnoreCase("off"))
+					{
+						Player player = (Player) sender;
+						sender.sendMessage(String.format("%s%s",lfv.Message("prefix"),lfv.Message("ssm-off")));
+						lfv.SimpleSafeModeEnabler(player, false);
+					}
+					
 					
 					//Command with argument doesn't match with any previous conditions
 					
