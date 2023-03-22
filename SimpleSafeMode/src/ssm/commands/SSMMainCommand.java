@@ -19,7 +19,7 @@ public class SSMMainCommand implements CommandExecutor
 	//Getting info from another classes
 	LogicFunctions lfv = new LogicFunctions();
 	
-	
+	// - /SSM test -> sendmsg
 	
 	//Constructor to allow to class SimpleSafeMode to register the command
 	public SSMMainCommand(SimpleSafeMode simpleSafeMode){}
@@ -59,6 +59,22 @@ public class SSMMainCommand implements CommandExecutor
 						sender.sendMessage(String.format("%s%s",lfv.Message("prefix"),lfv.Message("developers")));
 						lfv.ReloadConfig();
 					}
+					
+					//Command with argument test
+					else if(args[0].equalsIgnoreCase("test"))
+					{
+						TestCMD testcmd = new TestCMD();
+						
+						testcmd.TempTest(sender);
+						((Player) sender).getPlayer();
+						
+
+						
+						
+						
+					}
+					
+					
 					
 					//Command with argument on
 					else if(args[0].equalsIgnoreCase("on"))

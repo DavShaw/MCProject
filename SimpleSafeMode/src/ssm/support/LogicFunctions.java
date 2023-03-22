@@ -1,5 +1,10 @@
 package ssm.support;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Random;
+
 import org.bukkit.Bukkit;
 
 import ssm.simplesafemode.SimpleSafeMode;
@@ -62,6 +67,32 @@ public class LogicFunctions
     		ssmv.saveConfig();
     	}
     }
+    
+    
+    //Method to get online players
+    public List<Player> GetOnlinePlayer()
+    {
+        ArrayList<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
+        return players;
+        
+    }
+    
+    
+    //Method to return a random number
+    public int RandomNumber(List<Player> list)
+    {
+    	int limit = list.size() - 1;
+    	int NUMBER;
+    	
+    	Random random = new Random();
+    	
+        NUMBER = random.nextInt(limit - 0 + 1) + 0;
+        
+    	return NUMBER;
+    }
+
+    
+    
     
     
     //Method to check if any path exist

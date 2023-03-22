@@ -23,7 +23,7 @@ public class ToServerQuit implements Listener
 			if(lfv.CheckConfigPathExist("playerinfo."+event.getPlayer().getUniqueId()))
 			{
 				//Changing status info to false
-				lfv.ChangePathInfo("playerinfo."+event.getPlayer().getUniqueId()+".status", "true");
+				lfv.ChangePathInfo("playerinfo."+event.getPlayer().getUniqueId()+".status", "false");
 			}
 		}
 			
