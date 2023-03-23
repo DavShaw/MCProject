@@ -78,6 +78,7 @@ public class SSMMainCommand implements CommandExecutor
 					
 					//Command with argument on
 					else if(args[0].equalsIgnoreCase("on"))
+						
 					{
 						Player player = (Player) sender;
 						sender.sendMessage(String.format("%s%s",lfv.Message("prefix"),lfv.Message("ssm-on")));
