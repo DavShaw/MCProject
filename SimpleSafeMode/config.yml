@@ -25,6 +25,10 @@ message:
     noexist: "Sorry, but this command doesn't exist. Use /ssm help to see plugin commands"
     noenoughplayers: "Sorry, but there are not enough players to teleport"
     hasbeenteleported: "Hey, you has been teleported to %user%"
+    ownchaton: "Hey! Your chat is on"
+    ownchatoff: "Hey! Your chat is off"
+    flyon: "Hey! SSM fly is on"
+    flyoff: "Hey! SSM fly is off"
     ssm-on: "Hey! SafeMode is enabled"
     ssm-off: "Hey! SafeMode is disabled"
     

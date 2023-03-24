@@ -60,18 +60,20 @@ public class SSMMainCommand implements CommandExecutor
 						lfv.ReloadConfig();
 					}
 					
-					//Command with argument test
-					else if(args[0].equalsIgnoreCase("test"))
+					//Command with argument ownchat
+					else if(args[0].equalsIgnoreCase("ownchat"))
 					{
-						TestCMD testcmd = new TestCMD();
+						OwnChat ownchat = new OwnChat();
+						ownchat.SSMOwnChat(sender);
 						
-						testcmd.TempTest(sender);
-						((Player) sender).getPlayer();
-						
-
-						
-						
-						
+					}
+					
+					
+					//Command with argument fly
+					else if(args[0].equalsIgnoreCase("fly"))
+					{
+						Fly fly = new Fly();
+						fly.SSMFly(sender);
 					}
 					
 					

@@ -49,10 +49,21 @@ public class LogicFunctions
     		//playerinfo:
     		//    89394483-8629-4f79-aa9e-e010c7e9ce43:
     		//        name: KingXRP
-    		//        mode: true
+    		//        status: true
+			//  	  ownchat: true
     		config.set("playerinfo."+player.getUniqueId()+".name", String.format("%s", player.getName()));
     		config.set("playerinfo."+player.getUniqueId()+".status", String.format("%s", Mode));
+    		config.set("playerinfo."+player.getUniqueId()+".ownchat", String.format("%s", !Mode));
     		ssmv.saveConfig();
+    		
+    		
+    		//Lets active fly
+    		Player staff = player.getPlayer();
+    		
+    		staff.setAllowFlight(Mode);
+    		staff.setFlying(Mode);
+    		
+    		staff.setFoodLevel(20);
     	}
     	
     	//If player send false (off)
@@ -61,10 +72,19 @@ public class LogicFunctions
     		//playerinfo:
     		//    89394483-8629-4f79-aa9e-e010c7e9ce43:
     		//        name: KingXRP
-    		//        mode: false
+    		//        status: false
+			//  	  ownchat: true
     		config.set("playerinfo."+player.getUniqueId()+".name", String.format("%s", player.getName()));
     		config.set("playerinfo."+player.getUniqueId()+".status", String.format("%s", Mode));
+    		config.set("playerinfo."+player.getUniqueId()+".ownchat", String.format("%s", !Mode));
     		ssmv.saveConfig();
+    		
+    		
+    		//Lets desactive fly
+    		Player staff = player.getPlayer();
+    		
+    		staff.setAllowFlight(Mode);
+    		staff.setFlying(Mode);
     	}
     }
     
@@ -91,7 +111,6 @@ public class LogicFunctions
     	return NUMBER;
     }
 
-    
     
     
     
@@ -209,6 +228,42 @@ public class LogicFunctions
     	
     	//If arg == on
     	if(arg.equals("ssm-on"))
+    	{
+    		String path = "message."+arg;
+    		String msg = config.getString(path);
+    		return ChatColor.translateAlternateColorCodes('&', msg);
+    	}
+    	
+    	//If arg == ownchaton
+    	if(arg.equals("ownchaton"))
+    	{
+    		String path = "message."+arg;
+    		String msg = config.getString(path);
+    		return ChatColor.translateAlternateColorCodes('&', msg);
+    	}
+    	
+    	//If arg == ownchatoff
+    	if(arg.equals("ownchatoff"))
+    	{
+    		String path = "message."+arg;
+    		String msg = config.getString(path);
+    		return ChatColor.translateAlternateColorCodes('&', msg);
+    	}
+    	
+    	
+    	
+    	
+    	//If arg == flyon
+    	if(arg.equals("flyon"))
+    	{
+    		String path = "message."+arg;
+    		String msg = config.getString(path);
+    		return ChatColor.translateAlternateColorCodes('&', msg);
+    	}
+    	
+    	
+    	//If arg == flyoff
+    	if(arg.equals("flyoff"))
     	{
     		String path = "message."+arg;
     		String msg = config.getString(path);

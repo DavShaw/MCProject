@@ -24,6 +24,7 @@ public class ToServerQuit implements Listener
 			{
 				//Changing status info to false
 				lfv.ChangePathInfo("playerinfo."+event.getPlayer().getUniqueId()+".status", "false");
+				lfv.ChangePathInfo("playerinfo."+event.getPlayer().getUniqueId()+".ownchat", "true");
 			}
 		}
 			
