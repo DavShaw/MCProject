@@ -1,0 +1,91 @@
+  #
+  # ▄▄▄██▀▀▀▒█████   ██▓ ███▄    █  ▄▄▄       ▄████▄  ▄▄▄█████▓ ██▓ ▒█████   ███▄    █   ██████ 
+  #   ▒██  ▒██▒  ██▒▓██▒ ██ ▀█   █ ▒████▄    ▒██▀ ▀█  ▓  ██▒ ▓▒▓██▒▒██▒  ██▒ ██ ▀█   █ ▒██    ▒ 
+  #   ░██  ▒██░  ██▒▒██▒▓██  ▀█ ██▒▒██  ▀█▄  ▒▓█    ▄ ▒ ▓██░ ▒░▒██▒▒██░  ██▒▓██  ▀█ ██▒░ ▓██▄   
+  #▓██▄██▓ ▒██   ██░░██░▓██▒  ▐▌██▒░██▄▄▄▄██ ▒▓▓▄ ▄██▒░ ▓██▓ ░ ░██░▒██   ██░▓██▒  ▐▌██▒  ▒   ██▒
+  # ▓███▒  ░ ████▓▒░░██░▒██░   ▓██░ ▓█   ▓██▒▒ ▓███▀ ░  ▒██▒ ░ ░██░░ ████▓▒░▒██░   ▓██░▒██████▒▒
+  # ▒▓▒▒░  ░ ▒░▒░▒░ ░▓  ░ ▒░   ▒ ▒  ▒▒   ▓▒█░░ ░▒ ▒  ░  ▒ ░░   ░▓  ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+  # ▒ ░▒░    ░ ▒ ▒░  ▒ ░░ ░░   ░ ▒░  ▒   ▒▒ ░  ░  ▒       ░     ▒ ░  ░ ▒ ▒░ ░ ░░   ░ ▒░░ ░▒  ░ ░
+  # ░ ░ ░  ░ ░ ░ ▒   ▒ ░   ░   ░ ░   ░   ▒   ░          ░       ▒ ░░ ░ ░ ▒     ░   ░ ░ ░  ░  ░  
+  # ░   ░      ░ ░   ░           ░       ░  ░░ ░                ░      ░ ░           ░       ░  
+  #                                          ░                                                  
+  #
+  #
+  #
+  #
+  #
+  #Config version: 1.9
+config:
+  #prefix: 'JoinActions »' || This will replace %prefix% with the text you put on it.
+  #spawn-on-join: true / false || This will automatically teleport every player who joins your server to the set spawn.
+  #spawn-on-death: true / false || This will automatically teleport every player who dies to the set spawn.
+  #title-on-join: true/false || Determines whether a title will be automatically sent when a player.
+  #message-on-join: true/false || Determines whether a message will be automatically sent when a player .
+  #send-spawn-message: true / false || This will send a message when a player is teleported to spawn (by spawn-on-join or /ja spawn).
+  prefix: '&6&lJoin&c&lActions &8&l»'
+  spawn-on-join: false
+  spawn-on-death: false
+  title-on-join: false
+  message-on-join: false
+  send-spawn-message: false
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+data:
+  #This is the spawn data. You can edit it from here (config.yml) or by using /ja setspawn. The spawn will be set at your current location.
+  #world: 'world_name' || The name of the world you want to teleport players to.
+  #x: 'number' || The x-coordinate of the spawn location.
+  #y: 'number' || The y-coordinate of the spawn location.
+  #z: 'number' || The z-coordinate of the spawn location.
+  #yaw: 'number' || The yaw value of the player's head.
+  #pitch: 'number' || The pitch value of the player's head.
+  #Don't know what yaw and pitch are? Check out this source: https://bukkit.org/threads/what-is-yaw-and-pitch.101146/
+  world: 'your_world'
+  x: '0'
+  y: '0'
+  z: '0'
+  yaw: '0'
+  pitch: '0'
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+messages:
+  #This is the message config.
+  #reload: This message will appear when you execute /ja reload.
+  #spawn: This message will appear when you execute /ja spawn or get teleported by spawn-on-join (true / false).
+  #setspawn: This message will appear when you execute /ja setspawn.
+  #version: This message will appear when you execute /ja version.
+  #developer: This message will appear when you execute /ja developer.
+  #url: This message will appear when you execute /ja url.
+  #title: This will appear a title when a player joins on the server.
+  #subtitle: This will appear a subtitle when a player joins on the server.
+  #join-message: This will appear a message when player joins on the server.
+  #no-player: This message will appear if the console executes any JoinActions command (Commands are only available for players).
+  #no-permission: This message will appear when any player with insufficient permissions tries to execute any command.
+  #no-exist: This message will appear when you try to execute any command that doesn't exist.
+  #error-staff: This message will appear on the console if the plugin encounters any config.yml error.
+  #error-user: This message will appear on the player's chat if any command encounters an error.
+  reload: '%prefix% &aPlugin reloaded :)'
+  spawn: '%prefix% &aYou have been teleported to the spawn'
+  spawn-set: '%prefix% &aThe new spawn has been setted in your location'
+  version: '%prefix% &aThis plugin is running on %version% version'
+  developer: '%prefix% &aPlugin developed by: %developer%'
+  url: '%prefix% &aVisit our official site: %url%'
+  title: '&c&lWelcome, &a%player% :)'
+  subtitle: '&d&lyour server name'
+  join-message: |+
+   &aHi, &c%player%&a, welcome
+   to server name. Enjoy it :)
+   
+   (multiline message)
+  no-player: '%prefix% &c&lCommand only for players'
+  no-permission: '%prefix% &cSorry, but you dont have enough permission to execute this command'
+  no-exist: '%prefix% &cSorry, but command you enter doesnt exist. Check out /ja help'
+  error-staff: '%prefix% &4Hey, there is a fatal error. Check console and config. (This is an config error, no a plugin error.)'
+  error-user: '%prefix% &cHey, we got some issus with this command. Contact an admin'
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+  help-header: '&7&m===================='
+  help-help: '&8/&bja &ehelp &8- &aSee JoinActions commands'
+  help-setspawn: '&8/&bja &esetspawn &8- &aSet a location for spawn'
+  help-spawn: '&8/&bja &espawn &8- &aTeleport to spawn'
+  help-reload: '&8/&bja &ereload &8- &aReload JoinActions'
+  help-version: '&8/&bja &eversion &8- &aSee current plugin version'
+  help-developer: '&8/&bja &edeveloper &8- &aSee plugin developers'
+  help-url: '&8/&bja &eurl &8- &aGet JoinActions spigot url'
+  help-footer: '&7&m===================='

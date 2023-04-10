@@ -1,0 +1,50 @@
+main: ja.joinactions.JoinActions
+version: 1.7.6
+name: JoinAction
+author: KingXRP
+website: www.github.com/DavShaw/
+
+
+commands:
+  ja:
+   description: Main command for JoinActions
+  joinactions:
+    description: Main command for JoinActions
+  ja help:
+    description: See JoinActions commands
+  ja setspawn:
+    description: Set a location for spawn
+  ja spawn:
+    description: Teleport to spawn
+  ja reload:
+    description: Reload JoinActions
+  ja version:
+    description: See current plugin version
+  ja developer:
+    description: See plugin developers
+  ja url:
+    description: Get JoinActions url
+
+
+permissions:
+  ja.help:
+    description: See JoinActions commands
+    default: false
+  ja.setspawn:
+    description: Set a location for spawn
+    default: false
+  ja.spawn:
+    description: Teleport to spawn
+    default: false
+  ja.reload:
+    description: Reload JoinActions
+    default: false
+  ja.version:
+    description: See current plugin version
+    default: false
+  ja.developer:
+    description: See plugin developers
+    default: false
+  ja.url:
+    description: Get JoinActions url
+    default: false
