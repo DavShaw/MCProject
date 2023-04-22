@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import ja.commands.MainCommand;
 import ja.events.onDeath;
+import ja.events.onFall;
 import ja.events.onJoin;
 import ja.events.onMove;
 
@@ -75,6 +76,7 @@ public class JoinActions extends JavaPlugin
 		pm.registerEvents(new onJoin(), this);	
 		pm.registerEvents(new onDeath(), this);	
 		pm.registerEvents(new onMove(), this);	
+		pm.registerEvents(new onFall(), this);	
 	}
 	
 	

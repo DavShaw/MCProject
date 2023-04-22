@@ -2,23 +2,26 @@ package ja.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-
 import ja.support.SupportData;
 
 public class CMD_SPAWN
 {
 	 private static SupportData sdo = new SupportData();
 	 
+	 public static boolean PlayerTeleported = false;
+	 
 	 public static void command(Player player)
 	 {
 		
 		 try
 		 {
-			 player.teleport(sdo.GetSpawnData()); 
+			 player.teleport(sdo.GetSpawnData());
+			 PlayerTeleported = true;
 			 
 			 if (sdo.ConfigPathGetter("config.send-spawn-message").equalsIgnoreCase("true"))
 			 {
 				 player.sendMessage(sdo.Message("spawn", null));
+				 
 			 }
 		 }
 		 
