@@ -9,5 +9,6 @@ public class CMD_RELOAD
 	 public static void command()
 	 {
 		 sdo.ReloadConfig();
+		 sdo.ReloadItems();
      }
 }

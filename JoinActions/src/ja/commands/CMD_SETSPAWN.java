@@ -22,12 +22,12 @@ public class CMD_SETSPAWN
 	     String pitch = String.valueOf((float) location.getPitch());
 	     
 	     //Save in config.yml
-	     sdo.SetPathInfo("data.world",world);
-	     sdo.SetPathInfo("data.x",x);
-	     sdo.SetPathInfo("data.y",y);
-	     sdo.SetPathInfo("data.z",z);
-	     sdo.SetPathInfo("data.yaw",yaw);
-	     sdo.SetPathInfo("data.pitch",pitch);
+	     sdo.ConfigSetPathInfo("data.world",world);
+	     sdo.ConfigSetPathInfo("data.x",x);
+	     sdo.ConfigSetPathInfo("data.y",y);
+	     sdo.ConfigSetPathInfo("data.z",z);
+	     sdo.ConfigSetPathInfo("data.yaw",yaw);
+	     sdo.ConfigSetPathInfo("data.pitch",pitch);
 	     
 	     player.sendMessage(sdo.Message("spawn-set", null));
     }

@@ -129,8 +129,20 @@ public class MainCommand implements CommandExecutor
 					{
 						player.sendMessage(sdo.Message("no-permission",null));
 					}
+				}
+				
+				else if (args[0].equalsIgnoreCase("item"))
+				{
+					if (player.hasPermission("ja.item") || player.isOp())
+					{
+						player.sendMessage("Item obtenido");
+						CMD_GET_ITEM.GetItems(player);
+					}
 					
-					
+					else
+					{
+						player.sendMessage(sdo.Message("no-permission",null));
+					}
 				}
 				
 				else

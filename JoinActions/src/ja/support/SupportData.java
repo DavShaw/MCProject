@@ -17,11 +17,16 @@ public class SupportData
 
 	
 	public void ReloadConfig()
-    {
-    	jao.reloadConfig();
-    }
+	{
+		jao.reloadConfig();
+	}
 	
-	public boolean CheckConfigPathExist(String path)
+	public void ReloadItems()
+	{
+		jao.reloadItems();
+	}
+	
+	public boolean ConfigPathExist(String path)
     {
     	FileConfiguration config = jao.getConfig();
     	
@@ -36,7 +41,7 @@ public class SupportData
 
 	public String ConfigPathGetter(String path)
     {
-		if (CheckConfigPathExist(path))
+		if (ConfigPathExist(path))
 		{
 			FileConfiguration config = jao.getConfig();
 	    	return config.getString(path);
@@ -46,6 +51,45 @@ public class SupportData
     	
     }
 
+	public void ConfigSetPathInfo(String path, String pathinfo)
+    {
+    	FileConfiguration config = jao.getConfig();
+    	config.set(path,pathinfo);
+    	jao.saveConfig();
+    }
+
+	public boolean ItemsPathExist(String path)
+    {
+    	FileConfiguration config = jao.getItems();
+    	
+    	try
+    	{
+    		if(config.getString(path) != null) {return true;}
+    	}
+    	
+    	catch (NullPointerException error) {return false;}
+    	return false;
+    }
+
+	public String ItemsPathGetter(String path)
+    {
+		if (ItemsPathExist(path))
+		{
+			FileConfiguration config = jao.getItems();
+	    	return config.getString(path);
+		}
+		return null;
+		
+    	
+    }
+
+	public void ItemsSetPathInfo(String path, String pathinfo)
+    {
+    	FileConfiguration config = jao.getItems();
+    	config.set(path,pathinfo);
+    	jao.SaveItems();
+    }
+	
 	public Location GetSpawnData()
 	{
 		try
@@ -71,13 +115,34 @@ public class SupportData
 		
 	}
 	
-	public void SetPathInfo(String path, String pathinfo)
+    public String EnchantNameGetter(String enchant_format)
     {
-    	FileConfiguration config = jao.getConfig();
-    	config.set(path,pathinfo);
-    	jao.saveConfig();
+
+        try
+        {
+            return enchant_format.substring(0, enchant_format.indexOf(":"));
+        }
+        catch (Exception error)
+        {
+            return "";
+        }
+
     }
-	
+
+    public String EnchantLevelGetter(String enchant_format)
+    {
+
+        try
+        {
+            return enchant_format.substring(enchant_format.indexOf(":") + 1, enchant_format.length());
+        }
+        catch (Exception error)
+        {
+            return "";
+        }
+
+    }
+
 	public String Message(String arg, Player player)
     {
     	//object to get config.yml information

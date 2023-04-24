@@ -14,7 +14,7 @@
   #
   #
   #
-  #Config version: 1.9
+  #Config version: 2.0
 config:
   #prefix: 'JoinActions »' || This will replace %prefix% with the text you put on it.
   #spawn-on-join: true / false || This will automatically teleport every player who joins your server to the set spawn.

@@ -1,0 +1,12 @@
+items:
+#TEST
+    example_item:
+       item_name: "magic apple"
+       item_lore:
+        - "lore 1"
+        - "lore 2"
+        - "lore 3"
+       item_type: "260"
+       item_enchants:
+        - "DAMAGE_ALL:10"
+        - "ENCHANT:LEVEL"
