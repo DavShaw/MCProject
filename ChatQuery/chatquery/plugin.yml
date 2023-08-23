@@ -1,0 +1,15 @@
+main: org.kingxrp.chatquery.ChatQuery
+name: ChatQuery
+version: 0.1
+api-version: 1.19
+description: Plugin to make SQL Queries from minecraft U.U
+author: KingXRP
+website: www.github.com/DavShaw
+prefix: Cq
+aliases: [Cq, cq, chatquery, ChatQuery, Chatquery, Chatquery]
+commands:
+  cq:
+    description: Main command for ChatQuery
+    usage: /cq <sub-cmd>
+    aliases: [Cq, cq, chatquery, ChatQuery, Chatquery, Chatquery]
+    permission: chatquery.voidquery
